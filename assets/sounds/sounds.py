@@ -3,7 +3,7 @@ import pygame
 
 class SoundManager:
 
-    def __int__(self):
+    def __init__(self):
         self.sounds = {
             'mainBGM': pygame.mixer.Sound("asset/sounds/mainBGM.ogg")
         }
