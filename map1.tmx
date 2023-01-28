@@ -64,7 +64,7 @@
   <object id="7" class="collision" x="526" y="274" width="190" height="43"/>
   <object id="8" class="collision" x="673" y="317" width="44" height="66"/>
   <object id="9" class="collision" x="673" y="431" width="46" height="368"/>
-  <object id="10" name="spawn" class="player" x="240" y="61.3333">
+  <object id="10" name="spawn" class="player" x="229.333" y="68">
    <point/>
   </object>
  </objectgroup>
