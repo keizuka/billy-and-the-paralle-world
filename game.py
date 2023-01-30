@@ -8,6 +8,7 @@ from player import Player
 class Game:
 
     def __init__(self):
+
         pygame.init()
         self.screen = pygame.display.set_mode((800, 600))
         pygame.display.set_caption("billy and the paralle world")
@@ -36,16 +37,16 @@ class Game:
 
         pressed = pygame.key.get_pressed()
 
-        if pressed[pygame.K_UP]:
+        if pressed[pygame.K_z]:
             self.player.move_up()
             self.player.change_animation('up')
-        elif pressed[pygame.K_DOWN]:
+        elif pressed[pygame.K_s]:
             self.player.move_down()
             self.player.change_animation('down')
-        elif pressed[pygame.K_LEFT]:
+        elif pressed[pygame.K_q]:
             self.player.move_left()
             self.player.change_animation('left')
-        elif pressed[pygame.K_RIGHT]:
+        elif pressed[pygame.K_d]:
             self.player.move_right()
             self.player.change_animation('right')
 
