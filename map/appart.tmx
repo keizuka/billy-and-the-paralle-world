@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.6" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="15">
+ <tileset firstgid="1" source="pixel-cyberpunk-interior.tsx"/>
+ <tileset firstgid="232" source="tileset_dungeon.tsx"/>
+ <layer id="1" name="floor" width="8" height="8">
+  <data encoding="csv">
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68,
+68,68,68,68,68,68,68,68
+</data>
+ </layer>
+ <layer id="2" name="walls" width="8" height="8">
+  <data encoding="csv">
+151,171,171,171,171,171,171,149,
+131,0,0,0,0,0,0,127,
+131,0,0,0,0,0,0,127,
+131,0,0,0,0,0,0,127,
+131,0,0,0,0,0,0,127,
+131,0,0,0,0,0,0,127,
+131,0,0,0,0,0,0,127,
+109,87,87,87,87,87,87,107
+</data>
+ </layer>
+ <layer id="3" name="furniture1" width="8" height="8">
+  <data encoding="csv">
+124,0,0,124,0,0,112,165,
+0,196,197,0,118,119,133,0,
+0,217,218,0,116,0,0,0,
+1610612817,0,0,0,0,0,0,0,
+1610612816,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,68,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="furniture2" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,198,199,0,0,0,0,0,
+0,219,220,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,68,0,0,0,0,0,
+0,0,87,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="objects" offsetx="-1" offsety="1">
+  <object id="1" type="collision" x="10" y="1" width="235" height="11"/>
+  <object id="3" type="collision" x="1" y="1" width="9" height="254"/>
+  <object id="4" type="collision" x="11" y="244" width="244" height="10"/>
+  <object id="5" type="collision" x="248" y="0" width="8" height="243"/>
+  <object id="6" type="collision" x="193" y="10" width="27" height="44"/>
+  <object id="7" type="collision" x="129" y="32" width="61" height="29"/>
+  <object id="8" type="collision" x="130" y="73" width="25" height="17"/>
+  <object id="9" type="collision" x="44" y="40" width="41" height="44"/>
+  <object id="10" type="collision" x="0" y="97" width="26" height="59"/>
+  <object id="11" type="collision" x="10" y="4" width="11" height="25"/>
+  <object id="12" type="collision" x="117" y="28" width="11" height="19" rotation="180"/>
+  <object id="13" name="appart_exit" type="collision" x="49" y="61" width="29" height="25"/>
+  <object id="14" name="appart_spawn" x="83" y="211">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
