@@ -2,6 +2,7 @@ import pygame
 import pytmx
 import pyscroll
 from player import Player
+from src.dialog import DialogBox
 from src.map import MapManager
 
 
@@ -11,14 +12,16 @@ class Game:
 
         pygame.init()
         self.screen = pygame.display.set_mode((850, 850))
+        pygame.display.set_icon(pygame.image.load('G:/GitHub/billy-and-the-paralle-world/assets/Icons/gameIcon.png'))
         pygame.display.set_caption("billy and the paralle world")
-        pygame.mixer.music.load('G:/GitHub/billy-and-the-paralle-world/assets/Music/village-music.mp3')
-        pygame.mixer.music.play(-1)
+        pygame.mixer.music.load('G:/GitHub/billy-and-the-paralle-world/assets/Music/village-music.mp3'),
+        pygame.mixer.music.play(-1),
         pygame.mixer.music.set_volume(0.1)
 
         # generer le joueur
         self.player = Player()
         self.map_manager = MapManager(self.screen, self.player)
+        self.dialog_box = DialogBox()
 
     def handle_input(self):
 
@@ -26,16 +29,12 @@ class Game:
 
         if pressed[pygame.K_z]:
             self.player.move_up()
-            self.player.change_animation('up')
         elif pressed[pygame.K_s]:
             self.player.move_down()
-            self.player.change_animation('down')
         elif pressed[pygame.K_q]:
             self.player.move_left()
-            self.player.change_animation('left')
         elif pressed[pygame.K_d]:
             self.player.move_right()
-            self.player.change_animation('right')
         # elif pressed[pygame.K_ESCAPE]:
 
     def update(self):
@@ -52,11 +51,15 @@ class Game:
             self.handle_input()
             self.update()
             self.map_manager.draw()
+            self.dialog_box.render(self.screen)
             pygame.display.flip()
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_SPACE:
+                        self.map_manager.check_npc_collision(self.dialog_box)
 
             clock.tick(60)
 
