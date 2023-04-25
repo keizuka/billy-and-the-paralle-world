@@ -11,10 +11,10 @@ class Game:
     def __init__(self):
 
         pygame.init()
-        self.screen = pygame.display.set_mode((850, 850))
-        pygame.display.set_icon(pygame.image.load('G:/GitHub/billy-and-the-paralle-world/assets/Icons/gameIcon.png'))
+        self.screen = pygame.display.set_mode((800, 800))
+        pygame.display.set_icon(pygame.image.load('C:/Users/babou/Documents/GitHub/billy-and-the-paralle-world/assets/Icons/gameIcon.png'))
         pygame.display.set_caption("billy and the paralle world")
-        pygame.mixer.music.load('G:/GitHub/billy-and-the-paralle-world/assets/Music/village-music.mp3'),
+        pygame.mixer.music.load('C:/Users/babou/Documents/GitHub/billy-and-the-paralle-world/assets/Music/village-music.mp3'),
         pygame.mixer.music.play(-1),
         pygame.mixer.music.set_volume(0.1)
 

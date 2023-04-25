@@ -5,7 +5,7 @@ class AnimateSprite(pygame.sprite.Sprite):
 
     def __init__(self, name):
         super().__init__()
-        self.sprite_sheet = pygame.image.load(f'G:/GitHub/billy-and-the-paralle-world/sprites/{name}.png')
+        self.sprite_sheet = pygame.image.load(f'C:/Users/babou/Documents/GitHub/billy-and-the-paralle-world/sprites/{name}.png')
         self.animation_index = 0
         self.clock = 0
         self.images = {

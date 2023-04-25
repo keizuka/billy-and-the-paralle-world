@@ -7,12 +7,12 @@ class DialogBox:
     Y_POSITION = 850/2
 
     def __init__(self):
-        self.box = pygame.image.load('G:/GitHub/billy-and-the-paralle-world/dialogs/dialog_box.png')
+        self.box = pygame.image.load('C:/Users/babou/Documents/GitHub/billy-and-the-paralle-world/dialogs/dialog_box.png')
         self.box = pygame.transform.scale(self.box, (500, 50))
         self.texts = []
         self.text_index = 0
         self.letter_index = 0
-        self.font = pygame.font.Font("G:/GitHub/billy-and-the-paralle-world/dialogs/dialog_font.ttf", 18)
+        self.font = pygame.font.Font("C:/Users/babou/Documents/GitHub/billy-and-the-paralle-world/dialogs/dialog_font.ttf", 18)
         self.reading = False
 
     def execute(self, dialog=[]):
